@@ -6,16 +6,20 @@ class SixArmRailsContactsCreateEmailContacts < ActiveRecord::Migration
 
     create_table TABLE, :force => true do |t|
 
+      # Admin
+      t.column :uuid, :string
       t.column :created_at, :datetime
       t.column :updated_at, :datetime
       t.column :creator_id, :integer
       t.column :updator_id, :integer
       t.column :status, :integer
 
+      # User
       t.column :user_id,    :integer
 
     end
 
+    add_index TABLE, :uuid
     add_index TABLE, :created_at
     add_index TABLE, :updated_at
     add_index TABLE, :creator_id
