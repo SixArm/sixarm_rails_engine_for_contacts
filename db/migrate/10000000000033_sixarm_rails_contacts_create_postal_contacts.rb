@@ -15,7 +15,7 @@ class SixArmRailsContactsCreateEmailContacts < ActiveRecord::Migration
       t.column :status, :integer
 
       # User
-      t.column :user_id,    :integer
+      t.column :user_id, :integer
 
     end
 
